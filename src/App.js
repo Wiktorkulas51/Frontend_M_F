@@ -1,15 +1,13 @@
 import React from "react";
 import GlobalStyle from "./theme/GlobalStyle";
-import Button from "./components/atoms/button/button";
+import Button from "./components/atoms/button/Button";
 
 const App = () => (
-  // <GlobalStyle>
-
-  // </GlobalStyle>
-
-  <div className="App">
-    <Button>asd</Button>
-  </div>
+  <React.Fragment>
+    <GlobalStyle>
+      <Button>asd</Button>
+    </GlobalStyle>
+  </React.Fragment>
 );
 
 export default App;

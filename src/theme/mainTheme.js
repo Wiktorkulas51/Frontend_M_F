@@ -1,6 +1,6 @@
 export const theme = {
-  geryBlue: "hls(198, 20, 48,100%",
-  grayOrange: "hls(34, 28, 48,100%",
+  geryBlue: "hsl(198, 20%, 48%, 100%)",
+  grayOrange: "hsl(34, 28%, 48%, 100%)",
   grey100: "hsl(0, 0%, 96%)",
   grey200: "hsl(0, 0%, 90%)",
   grey300: "hsl(0, 0%, 70%)",
