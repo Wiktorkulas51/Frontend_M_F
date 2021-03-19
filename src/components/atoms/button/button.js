@@ -17,7 +17,7 @@ const Button = styled.button`
   font-size: ${() => theme.fontSize.xxs};
   overflow: hidden;  
   transition: 1s all ease; 
-  
+  //issue with content
   
   &::after {
   content: "";
@@ -29,9 +29,10 @@ const Button = styled.button`
   background-color: ${() => theme.grayOrange};
   }
   
+  //issue with second
   &:hover::after {
     transition: all 0.4s ease;
-   width: ${({ second }) => (second ? "-100%" : "100%")}
+   width: ${({ second }) => (second ? "10%" : "100%")};
   
 
   }
