@@ -10,3 +10,7 @@ export default {
 export const prmiaryParagraph = () => (
   <primaryParagraph>Listen the music with friends right now!</primaryParagraph>
 );
+
+export const secondaryParagraph = () => (
+  <primaryParagraph secondary>for free</primaryParagraph>
+);

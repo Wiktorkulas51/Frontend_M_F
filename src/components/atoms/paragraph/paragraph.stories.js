@@ -1,6 +1,6 @@
 import React from "react";
 
-import Paragraph from "./paragraph";
+import Paragraph from "./Paragraph";
 
 export default {
   title: "Components/paragraph",
