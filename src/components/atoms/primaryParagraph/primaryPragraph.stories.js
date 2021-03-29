@@ -1,16 +1,16 @@
 import React from "react";
 
-import primaryParagraph from "./primaryParagraph";
+import PrimaryParagraph from "./primaryParagraph";
 
 export default {
-  title: "Components/paragraph",
-  component: primaryParagraph,
+  title: "Components/atoms/primaryParagraph",
+  component: PrimaryParagraph,
 };
 
 export const prmiaryParagraph = () => (
-  <primaryParagraph>Listen the music with friends right now!</primaryParagraph>
+  <PrimaryParagraph>Listen the music with friends right now!</PrimaryParagraph>
 );
 
 export const secondaryParagraph = () => (
-  <primaryParagraph secondary>for free</primaryParagraph>
+  <PrimaryParagraph secondary>for free</PrimaryParagraph>
 );

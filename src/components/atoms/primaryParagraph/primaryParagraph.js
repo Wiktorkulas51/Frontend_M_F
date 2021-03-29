@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 import { theme } from "../../../theme/mainTheme";
 
-const primaryParagraph = styled.p`
+const PrimaryParagraph = styled.p`
   font-family: ${() => theme.family}, sans-serif;
   margin: 0;
   color: ${() => theme.grayOrange};
@@ -36,4 +36,4 @@ const primaryParagraph = styled.p`
     `}
 `;
 
-export default primaryParagraph;
+export default PrimaryParagraph;

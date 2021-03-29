@@ -1,12 +1,11 @@
 import React from "react";
-
 import Paragraph from "./Paragraph";
 
 export default {
-  title: "Components/paragraph",
+  title: "Components/atoms/paragraph",
   component: Paragraph,
 };
 
-export const secondaryParagraph = () => (
+export const paragraph = () => (
   <Paragraph>Listen the music with friends right now!</Paragraph>
 );

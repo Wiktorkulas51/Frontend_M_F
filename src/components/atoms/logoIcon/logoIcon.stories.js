@@ -1,10 +1,10 @@
 import React from "react";
 
-import logoIcon from "./logoIcon";
+import LogoIcon from "./logoIcon";
 
 export default {
-  title: "Components/logoIcon",
-  component: logoIcon,
+  title: "Components/atoms/logoIcon",
+  component: LogoIcon,
 };
 
-export const logoIcons = () => <logoIcon></logoIcon>;
+export const logoIcons = () => <LogoIcon></LogoIcon>;

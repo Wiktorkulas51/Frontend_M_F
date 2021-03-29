@@ -1,10 +1,10 @@
 import React from "react";
 
-import Inpute from "./inpute";
+import Input from "./inpute";
 
 export default {
-  title: "Components/paragraph",
-  component: Inpute,
+  title: "Components/atoms/inpute",
+  component: Input,
 };
 
-export const Inpute = () => <Inpute>Look for your music</Inpute>;
+export const input = () => <Input placeholder="Look for your music"></Input>;
