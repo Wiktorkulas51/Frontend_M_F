@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { theme } from "../../../theme/mainTheme";
 
 const Button = styled.button`
@@ -13,30 +13,32 @@ const Button = styled.button`
   width: 120px;
   height: 30px;
   border: none;
-  /* border-left: 10px solid ${() => theme.grayOrange}; */
   font-size: ${() => theme.fontSize.xxs};
-  overflow: hidden;  
-  transition: 1s all ease; 
-  //issue with content
-  
-  &::after {
-  content: "";
-  position: absolute;
-  left: ${({ second }) => (second ? "115px" : "0px")};
-  top: 0px;
-  width: 5px;
-  height: 30px;
-  background-color: ${() => theme.grayOrange};
-  }
-  
-  //issue with second
-  &:hover::after {
-    transition: all 0.4s ease;
-   width: ${({ second }) => (second ? "10%" : "100%")};
-  
+  z-index: 1000;
 
+  &::before {
+    content: "";
+    position: absolute;
+    left: ${({ second }) => (second ? "115px" : "0px")};
+    top: 0px;
+    width: 5px;
+    height: 30px;
+    background-color: ${() => theme.grayOrange};
+    z-index: -1;
   }
-  
+
+  //issue with second
+  &:hover::before {
+    transition: all 0.4s ease;
+    width: 100%;
+    ${({ second }) =>
+      second &&
+      css`
+        & {
+          left: 0px;
+        }
+      `}
+  }
 `;
 
 export default Button;
