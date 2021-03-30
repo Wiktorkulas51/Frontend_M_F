@@ -3,6 +3,8 @@ import ButtonIcon from "./buttonIcon";
 import twitterIcon from "../../../assets/twitterIcon.svg";
 import facebookIcon from "../../../assets/facebookIcon.svg";
 import messageIcon from "../../../assets/messageIcon.svg";
+import person from "../../../assets/person.svg";
+import magniFire from "../../../assets/magnifire.svg";
 
 export default {
   title: "Components/atoms/buttonIcon",
@@ -17,4 +19,9 @@ export const buttonIconFacebook = () => (
 );
 export const buttonIconMessage = () => (
   <ButtonIcon icon={messageIcon}></ButtonIcon>
+);
+export const buttonIconPerson = () => <ButtonIcon icon={person}></ButtonIcon>;
+
+export const buttonIconMagniFire = () => (
+  <ButtonIcon icon={magniFire}></ButtonIcon>
 );

@@ -1,8 +1,15 @@
-import { Icon } from "@iconify/react";
-import roundLibraryMusic from "@iconify/icons-ic/round-library-music";
+import logoIcon from "../../../assets/musicLogo.svg";
 import styled from "styled-components";
-/* <Icon icon={roundLibraryMusic} />; */
 
-const LogoIcon = styled.image``;
+const LogoIcon = styled.button`
+  width: 50px;
+  height: 50px;
+  background-image: url(${() => logoIcon});
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+  border: none;
+  background-color: transparent;
+`;
 
 export default LogoIcon;

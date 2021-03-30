@@ -27,7 +27,6 @@ const Button = styled.button`
     z-index: -1;
   }
 
-  //issue with second
   &:hover::before {
     transition: all 0.4s ease;
     width: 100%;
