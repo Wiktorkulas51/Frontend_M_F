@@ -9,3 +9,5 @@ export default {
 export const paragraph = () => (
   <Paragraph>Listen the music with friends right now!</Paragraph>
 );
+
+export const paragraphBlue = () => <Paragraph grayBlue>name </Paragraph>;

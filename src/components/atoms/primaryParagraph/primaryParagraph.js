@@ -31,7 +31,7 @@ const PrimaryParagraph = styled.p`
   ${({ secondary }) =>
     secondary &&
     css`
-      color: ${() => theme.geryBlue};
+      color: ${() => theme.grayBlue};
       text-transform: uppercase;
     `}
 `;
