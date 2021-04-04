@@ -5,9 +5,10 @@ import facebookIcon from "../../../assets/facebookIcon.svg";
 import messageIcon from "../../../assets/messageIcon.svg";
 import person from "../../../assets/person.svg";
 import magniFire from "../../../assets/magnifire.svg";
+import smileIcon from "../../../assets/smileIcon.svg";
 
 export default {
-  title: "Components/atoms/buttonIcon",
+  title: "Components/atoms/buttons/buttonIcon",
   component: ButtonIcon,
 };
 
@@ -24,4 +25,8 @@ export const buttonIconPerson = () => <ButtonIcon icon={person}></ButtonIcon>;
 
 export const buttonIconMagniFire = () => (
   <ButtonIcon icon={magniFire}></ButtonIcon>
+);
+
+export const buttonIconSmileIcon = () => (
+  <ButtonIcon icon={smileIcon}></ButtonIcon>
 );

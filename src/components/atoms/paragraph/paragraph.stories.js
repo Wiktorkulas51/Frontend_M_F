@@ -11,3 +11,7 @@ export const paragraph = () => (
 );
 
 export const paragraphBlue = () => <Paragraph grayBlue>name </Paragraph>;
+
+export const paragraphWhite = () => <Paragraph normal>lul </Paragraph>;
+
+export const paragraphBlack = () => <Paragraph black>lul </Paragraph>;

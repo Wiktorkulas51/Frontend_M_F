@@ -3,7 +3,7 @@ import ButtonArrow from "./buttonArrow";
 import arrowIcon from "../../../assets/arrowIconWhite.png";
 
 export default {
-  title: "Components/atoms/buttonArrow",
+  title: "Components/atoms/buttons/buttonArrow",
   component: ButtonArrow,
 };
 

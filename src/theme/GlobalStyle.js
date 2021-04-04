@@ -7,6 +7,8 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+    margin: 0;
   
 }
 
@@ -14,13 +16,14 @@ const GlobalStyle = createGlobalStyle`
 
 
 html {
-    font-size: 62.5%
+    font-size: 62.5%;
+   
+
 }
 
 body {
     font-size: 1.6rem;
     font-family: 'Rubik', sans-serif;
-    font-family: 'Rubik Mono One', sans-serif;
 }
 
 `;

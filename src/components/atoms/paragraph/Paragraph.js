@@ -4,7 +4,19 @@ import { theme } from "../../../theme/mainTheme";
 const Paragraph = styled.p`
   font-family: ${() => theme.family}, sans-serif;
   margin: 0;
-  color: ${({ grayBlue }) => (grayBlue ? theme.grayBlue : theme.grayOrange)};
+  color: ${({ grayBlue, normal, black }) => {
+    if (normal) {
+      return "white";
+    }
+    if (black) {
+      return "black";
+    }
+    if (grayBlue) {
+      return theme.grayBlue;
+    } else {
+      return theme.grayOrange;
+    }
+  }};
   font-weight: ${() => theme.light};
   font-size: ${() => theme.fontSize.xs};
 `;
