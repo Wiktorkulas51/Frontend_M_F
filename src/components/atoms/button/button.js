@@ -13,8 +13,9 @@ const Button = styled.button`
   width: 120px;
   height: 30px;
   border: none;
-  font-size: ${() => theme.fontSize.xxs};
+  font-size: ${() => theme.fontSize.xs};
   z-index: 1000;
+  font-weight: ${() => theme.bold};
 
   &::before {
     content: "";

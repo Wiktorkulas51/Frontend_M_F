@@ -22,7 +22,7 @@ const PrimaryParagraph = styled.p`
         margin: 0;
         color: #fff;
         font-weight: ${() => theme.bigBold};
-        font-size: ${() => theme.fontSize.l};
+        font-size: ${() => theme.fontSize.xl};
         -webkit-text-fill-color: transparent;
         -webkit-text-stroke: 2px;
         opacity: 30%;

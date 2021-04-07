@@ -9,6 +9,7 @@ const Div = styled.div`
   background-color: #979797;
   opacity: 47%;
   transform: rotate(30deg);
+  z-index: 1000;
 `;
 
 export default Div;

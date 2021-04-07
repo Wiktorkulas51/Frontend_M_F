@@ -14,10 +14,10 @@ const Paragraph = styled.p`
     if (grayBlue) {
       return theme.grayBlue;
     } else {
-      return theme.grayOrange;
+      return "#bcb1a2";
     }
   }};
-  font-weight: ${() => theme.light};
+  font-weight: ${() => theme.bold};
   font-size: ${() => theme.fontSize.xs};
 `;
 
