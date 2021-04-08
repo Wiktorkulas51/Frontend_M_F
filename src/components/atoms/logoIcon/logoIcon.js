@@ -10,6 +10,7 @@ const LogoIcon = styled.button`
   background-size: 100% 100%;
   border: none;
   background-color: transparent;
+  display: inline-block;
 `;
 
 export default LogoIcon;

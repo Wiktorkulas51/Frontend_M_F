@@ -21,6 +21,7 @@ html {
 }
 
 body {
+    overflow: hidden;
     font-size: 1.6rem;
     font-family: 'Rubik', sans-serif;
 }

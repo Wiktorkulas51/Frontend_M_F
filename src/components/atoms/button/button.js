@@ -16,6 +16,7 @@ const Button = styled.button`
   font-size: ${() => theme.fontSize.xs};
   z-index: 1000;
   font-weight: ${() => theme.bold};
+  cursor: pointer;
 
   &::before {
     content: "";

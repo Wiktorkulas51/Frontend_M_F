@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./Views/mainView";
+import MainView from "./Views/mainView";
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <MainView />
   </React.StrictMode>,
   document.getElementById("root")
 );
