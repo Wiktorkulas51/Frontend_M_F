@@ -8,7 +8,17 @@ import AnimatedBox from "../components/organism/animatedBox/animatedBox";
 class LoadingTemplate extends Component {
   constructor(props) {
     super(props);
-    this.state = { loading: true };
+    this.state = { loading: true, prop: "false" };
+  }
+
+  countTime = (interval) => {
+    setInterval(() => {
+      this.setState({ prop: "true" });
+    }, interval);
+  };
+
+  componentDidMount() {
+    this.countTime(1000);
   }
 
   render() {
@@ -35,12 +45,17 @@ class LoadingTemplate extends Component {
       width: 100%;
       height: 350px;
     `;
+
+    const giveProps = (prop) => {
+      const ani = <AnimatedBox prop={prop}></AnimatedBox>;
+    };
+
     return (
       <MainTemplate>
         <Wrapper>
           <StyledParagraph>Wait please ...</StyledParagraph>
           <StyledWrapper>
-            <AnimatedBox />
+            <AnimatedBox second={this.state.prop} />
             <AnimatedBox second />
             <AnimatedBox />
           </StyledWrapper>
