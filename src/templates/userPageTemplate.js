@@ -1,11 +1,11 @@
 import React from "react";
-import PrimaryParagraph from "../components/atoms/primaryParagraph/primaryParagraph";
-import Paragraph from "../components/atoms/paragraph/Paragraph";
+import PrimaryParagraph from "components/atoms/primaryParagraph/primaryParagraph";
+import Paragraph from "components/atoms/paragraph/Paragraph";
 import styled from "styled-components";
-import { theme } from "../theme/mainTheme";
-import Div from "../components/molecules/div/div";
-import Button from "../components/atoms/button/Button";
-import GirlPicture from "../components/molecules/girlPicture/girlPicture";
+import { theme } from "theme/mainTheme";
+import Div from "components/molecules/div/div";
+import Button from "components/atoms/button/Button";
+import GirlPicture from "components/molecules/girlPicture/girlPicture";
 import MainTemplate from "./mainTemplate";
 
 const AbsoluteWrapper = styled.div`

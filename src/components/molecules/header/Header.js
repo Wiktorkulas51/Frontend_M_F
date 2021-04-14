@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import headerImage from "../../../assets/navImage.jpg";
+import headerImage from "assets/navImage.jpg";
 
 const HeaderImage = styled.header`
   position: absolute;

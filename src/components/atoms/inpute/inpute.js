@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
-import { theme } from "../../../theme/mainTheme";
-import magniFire from "../../../assets/magnifire.svg";
+import { theme } from "theme/mainTheme";
+import magniFire from "assets/magnifire.svg";
 
 const Input = styled.input`
   color: #ffffff;

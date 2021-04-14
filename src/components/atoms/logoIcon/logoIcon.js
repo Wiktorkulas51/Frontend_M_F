@@ -1,4 +1,4 @@
-import logoIcon from "../../../assets/musicLogo.svg";
+import logoIcon from "assets/musicLogo.svg";
 import styled from "styled-components";
 
 const LogoIcon = styled.button`

@@ -1,7 +1,7 @@
 import React from "react";
-import ButtonIcon from "../buttonIcon/buttonIcon";
+import ButtonIcon from "buttonIcon/buttonIcon";
 import Input from "./inpute";
-import magniFire from "../../../assets/magnifirewhite.png";
+import magniFire from "assets/magnifirewhite.png";
 import styled from "styled-components";
 
 export default {

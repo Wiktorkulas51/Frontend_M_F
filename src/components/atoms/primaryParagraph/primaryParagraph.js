@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { theme } from "../../../theme/mainTheme";
+import { theme } from "theme/mainTheme";
 
 const PrimaryParagraph = styled.p`
   font-family: ${() => theme.family}, sans-serif;
@@ -7,7 +7,7 @@ const PrimaryParagraph = styled.p`
   color: ${() => theme.grayOrange};
   font-weight: ${() => theme.bigBold};
   font-size: ${() => theme.fontSize.l};
-  z-index: 3;
+  z-index: 5;
   position: relative;
 
   ${({ secondary }) =>
@@ -26,7 +26,7 @@ const PrimaryParagraph = styled.p`
         -webkit-text-fill-color: transparent;
         -webkit-text-stroke: 2px;
         opacity: 30%;
-        z-index: 1;
+        z-index: -2;
       }
     `}
   ${({ secondary }) =>

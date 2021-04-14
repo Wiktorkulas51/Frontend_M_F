@@ -1,11 +1,11 @@
 import React from "react";
 import ButtonIcon from "./buttonIcon";
-import twitterIcon from "../../../assets/twitterIcon.svg";
-import facebookIcon from "../../../assets/facebookIcon.svg";
-import messageIcon from "../../../assets/messageIcon.svg";
-import person from "../../../assets/person.svg";
-import magniFire from "../../../assets/magnifire.svg";
-import smileIcon from "../../../assets/smileIcon.svg";
+import twitterIcon from "assets/twitterIcon.svg";
+import facebookIcon from "assets/facebookIcon.svg";
+import messageIcon from "assets/messageIcon.svg";
+import person from "assets/person.svg";
+import magniFire from "assets/magnifire.svg";
+import smileIcon from "assets/smileIcon.svg";
 
 export default {
   title: "Components/atoms/buttons/buttonIcon",

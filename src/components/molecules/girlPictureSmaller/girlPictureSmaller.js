@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import GirlImageSmaller from "../../../assets/girlImageSmaller.png";
+import GirlImageSmaller from "assets/girlImageSmaller.png";
 
 const GirlPictureSmaller = styled.div`
   position: absolute;
