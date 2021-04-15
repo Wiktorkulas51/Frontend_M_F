@@ -32,12 +32,12 @@ const StyledWrapper = styled.div`
 class LoadingTemplate extends Component {
   constructor(props) {
     super(props);
-    this.state = { color: "red" };
+    this.state = { loading: true };
   }
 
   render() {
     return (
-      <MainTemplate>
+      <MainTemplate loading={this.state.loading}>
         <Wrapper>
           <StyledParagraph>Wait please ...</StyledParagraph>
           <StyledWrapper>

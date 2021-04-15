@@ -45,22 +45,6 @@ const StyledParagraph = styled(PrimaryParagraph)`
   margin-top: 50px;
 `;
 
-// <SecondWrapper>
-// <div>
-//   <LogoIcon as={Link} to="/" />
-//   <Link to="/" component={Logo}>
-//     M{"&"}F
-//   </Link>
-// </div>
-// <Wrapper>
-//   <Input placeholder="Look for your music" icon></Input>
-//   <ButtonMagniFire icon={magniFire}></ButtonMagniFire>
-// </Wrapper>
-// <BiggerButtonIcon icon={person}></BiggerButtonIcon>
-// </SecondWrapper>
-// <HeaderImage />
-// <Background></Background>
-
 const UserPageTemplate = () => {
   return (
     <>
