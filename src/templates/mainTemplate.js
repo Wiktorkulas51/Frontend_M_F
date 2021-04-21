@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { theme } from "theme/mainTheme";
@@ -60,6 +60,7 @@ const MainTemplate = ({ children, loading }) => {
 
   const useHandleChange = (e) => {
     const inpValue = e.target.value;
+    setInputeFocus(false);
 
     if (inpValue !== "") {
       console.log(e.target.value);
@@ -69,13 +70,14 @@ const MainTemplate = ({ children, loading }) => {
       }
     } else {
       setloadingState(false);
-      return;
     }
   };
 
+  console.log("inp", InputeFocus);
+
   return (
     <>
-      {InputeFocus && !loadingState ? (
+      {InputeFocus ? (
         <LoadingTemplate />
       ) : (
         <>
