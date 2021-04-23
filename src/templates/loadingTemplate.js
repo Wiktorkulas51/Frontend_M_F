@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import MainTemplate from "./mainTemplate";
 import Paragraph from "components/atoms/paragraph/Paragraph";
 import styled from "styled-components";
 import { theme } from "theme/mainTheme";
@@ -35,18 +34,18 @@ class LoadingTemplate extends Component {
     this.state = { loading: true };
   }
 
+  shouldComponentUpdate = () => false;
+
   render() {
     return (
-      <MainTemplate loading={this.state.loading}>
-        <Wrapper>
-          <StyledParagraph>Wait please ...</StyledParagraph>
-          <StyledWrapper>
-            <AnimatedBox />
-            <AnimatedBox second />
-            <AnimatedBox />
-          </StyledWrapper>
-        </Wrapper>
-      </MainTemplate>
+      <Wrapper>
+        <StyledParagraph>Wait please ...</StyledParagraph>
+        <StyledWrapper>
+          <AnimatedBox />
+          <AnimatedBox second />
+          <AnimatedBox />
+        </StyledWrapper>
+      </Wrapper>
     );
   }
 }

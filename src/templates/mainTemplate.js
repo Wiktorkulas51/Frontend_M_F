@@ -6,7 +6,7 @@ import Input from "components/atoms/inpute/inpute";
 import LogoIcon from "components/atoms/logoIcon/logoIcon";
 import HeaderImage from "components/molecules/header/Header";
 import magniFire from "assets/magnifirewhite.png";
-import person from "assets/person.svg";
+import person from "assets/personBlack.svg";
 import ButtonIcon from "components/atoms/buttonIcon/buttonIcon";
 import LoadingTemplate from "./loadingTemplate";
 
@@ -32,14 +32,14 @@ const ButtonMagniFire = styled(ButtonIcon)`
 `;
 
 const StyledButtonIcon = styled(ButtonIcon)`
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
 `;
 
 const Background = styled.div`
   background-color: #000;
   max-width: 100%;
-  height: 77.3vh;
+  height: 80vh;
   margin-top: 90px;
   z-index: -4;
 `;
@@ -56,20 +56,13 @@ const Logo = styled.a`
 
 const MainTemplate = ({ children, loading }) => {
   const [InputeFocus, setInputeFocus] = useState(false);
-  const [loadingState, setloadingState] = useState(loading);
 
   const useHandleChange = (e) => {
     const inpValue = e.target.value;
     setInputeFocus(false);
 
     if (inpValue !== "") {
-      console.log(e.target.value);
       setInputeFocus(true);
-      if (loadingState === true) {
-        setInputeFocus(false);
-      }
-    } else {
-      setloadingState(false);
     }
   };
 
@@ -77,28 +70,31 @@ const MainTemplate = ({ children, loading }) => {
 
   return (
     <>
+      <SecondWrapper>
+        <div>
+          <LogoIcon />
+
+          <Link to="/" component={Logo}>
+            M{"&"}F
+          </Link>
+        </div>
+        <Wrapper>
+          <Input
+            placeholder="Look for your music"
+            icon
+            onChange={useHandleChange}
+          ></Input>
+          <ButtonMagniFire icon={magniFire}></ButtonMagniFire>
+        </Wrapper>
+        <StyledButtonIcon icon={person}></StyledButtonIcon>
+      </SecondWrapper>
+      <HeaderImage />
       {InputeFocus ? (
-        <LoadingTemplate />
+        <Background>
+          <LoadingTemplate />
+        </Background>
       ) : (
         <>
-          <SecondWrapper>
-            <div>
-              <LogoIcon as={Link} to="/" />
-              <Link to="/" component={Logo}>
-                M{"&"}F
-              </Link>
-            </div>
-            <Wrapper>
-              <Input
-                placeholder="Look for your music"
-                icon
-                onChange={useHandleChange}
-              ></Input>
-              <ButtonMagniFire icon={magniFire}></ButtonMagniFire>
-            </Wrapper>
-            <StyledButtonIcon icon={person}></StyledButtonIcon>
-          </SecondWrapper>
-          <HeaderImage />
           <Background>{children}</Background>
         </>
       )}

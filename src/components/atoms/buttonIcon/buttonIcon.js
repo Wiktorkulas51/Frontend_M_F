@@ -12,8 +12,9 @@ const ButtonIcon = styled.button`
   background-position: 50% 50%;
   background-size: 100% 100%;
   border: none;
+  cursor: pointer;
+
   background-color: transparent;
-  fill: white;
 `;
 
 export default ButtonIcon;

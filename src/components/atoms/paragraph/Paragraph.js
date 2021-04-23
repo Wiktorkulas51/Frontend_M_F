@@ -18,7 +18,7 @@ const Paragraph = styled.p`
     }
   }};
   font-weight: ${() => theme.bold};
-  font-size: ${() => theme.fontSize.xs};
+  font-size: ${() => theme.fontSize.s};
 `;
 
 export default Paragraph;
