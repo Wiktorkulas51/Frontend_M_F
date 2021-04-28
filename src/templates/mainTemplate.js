@@ -9,6 +9,7 @@ import magniFire from "assets/magnifirewhite.png";
 import person from "assets/personBlack.svg";
 import ButtonIcon from "components/atoms/buttonIcon/buttonIcon";
 import LoadingTemplate from "./loadingTemplate";
+import MediaTemplate from "./mediaTemplate";
 
 const SecondWrapper = styled.div`
   position: relative;
@@ -54,7 +55,7 @@ const Logo = styled.a`
   text-decoration: none;
 `;
 
-const MainTemplate = ({ children, loading }) => {
+const MainTemplate = ({ children }) => {
   const [InputeFocus, setInputeFocus] = useState(false);
 
   const useHandleChange = (e) => {
@@ -65,8 +66,6 @@ const MainTemplate = ({ children, loading }) => {
       setInputeFocus(true);
     }
   };
-
-  console.log("inp", InputeFocus);
 
   return (
     <>
@@ -95,7 +94,10 @@ const MainTemplate = ({ children, loading }) => {
         </Background>
       ) : (
         <>
-          <Background>{children}</Background>
+          <Background>
+            {children}
+            <MediaTemplate />
+          </Background>
         </>
       )}
     </>
