@@ -61,7 +61,6 @@ const UserPageTemplate = () => {
           </FlexWrapper>
         </GridWrapper>
         <GirlPicture />
-
         <Div></Div>
       </MainTemplate>
     </>
