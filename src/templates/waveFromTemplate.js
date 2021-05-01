@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import WaveSurfer from "wavesurfer.js";
 import MusicIcarus from "music/icarus.mp3";
 import { theme } from "theme/mainTheme";
@@ -15,9 +15,9 @@ let wavesurfer;
 
 const Wrapper = styled.div`
   position: relative;
-  width: 50%;
-  height: 50%;
-  left: 50px;
+  width: 80%;
+  height: 100%;
+  left: 120px;
   top: 50px;
 `;
 

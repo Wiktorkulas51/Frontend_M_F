@@ -4,22 +4,25 @@ import WaveFromTemplate from "./waveFromTemplate";
 import SongsTemplate from "./songsTemplate";
 import styled from "styled-components";
 
-// const GridWrapper = styled.div`
-//   height: 80%;
-//   display: grid;
-//   grid-template-columns: 90% 50%;
-//   grid-template-rows: 1fr 1fr;
-//   gap: 0px 0px;
-//   grid-template-areas:
-//     ". ."
-//     ". .";
-// `;
+const GridWrapper = styled.div`
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  grid-template-rows: 1.2fr 0.8fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". ."
+    ". .";
+  grid-gap: 20px;
+`;
 
 const RoomTemplate = () => {
   return (
     <MainTemplate>
-      <WaveFromTemplate />
-      <SongsTemplate />
+      <GridWrapper>
+        <WaveFromTemplate />
+        <SongsTemplate />
+      </GridWrapper>
     </MainTemplate>
   );
 };

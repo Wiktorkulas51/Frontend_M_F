@@ -1,10 +1,8 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { theme } from "theme/mainTheme";
 
 const ButtonIcon = styled.button`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: inline-block;
   padding: 0;
   width: 25px;
   height: 25px;
@@ -15,6 +13,13 @@ const ButtonIcon = styled.button`
   border: none;
   border-radius: 50px;
   background-color: ${() => theme.grayBlue};
+  cursor: pointer;
+
+  ${({ reversed }) =>
+    reversed &&
+    css`
+      transform: rotateY(180deg);
+    `}
 `;
 
 export default ButtonIcon;
