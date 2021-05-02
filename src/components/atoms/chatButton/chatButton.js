@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { theme } from "theme/mainTheme";
 
 const ButtonIcon = styled.button`
-  width: 80px;
+  width: 70%;
   height: 50px;
   background-color: #000;
   color: white;

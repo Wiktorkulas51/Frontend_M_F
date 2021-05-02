@@ -85,7 +85,7 @@ const MainTemplate = ({ children }) => {
           ></Input>
           <ButtonMagniFire icon={magniFire}></ButtonMagniFire>
         </Wrapper>
-        <StyledButtonIcon icon={person}></StyledButtonIcon>
+        <StyledButtonIcon></StyledButtonIcon>
       </SecondWrapper>
       <HeaderImage />
       {InputeFocus ? (
