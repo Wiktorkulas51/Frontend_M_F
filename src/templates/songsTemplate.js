@@ -50,7 +50,7 @@ const StyledButtonIcon = styled(ButtonIcon)`
 const SongBox = () => (
   <Wrapper>
     <Box img={smallBg}>
-      <StyledButtonIcon onClick={console.log("asd")} icon={play} />
+      <StyledButtonIcon icon={play} />
     </Box>
     <StyledParagraph>Song name</StyledParagraph>
   </Wrapper>

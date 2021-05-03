@@ -46,44 +46,71 @@ const StyledInpute = styled(Input)`
   color: #000;
 `;
 
+const StyledPicker = styled.div`
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+`;
+
 const ChatTemplate = () => {
   const [chosenEmoji, setChosenEmoji] = useState(null);
   const [Click, setClick] = useState(false);
+  const [Input, setInput] = useState("");
 
   const onEmojiClick = (e, emojiObject) => {
-    setChosenEmoji(emojiObject);
+    console.log(e, "a");
+    console.log(emojiObject);
+    setChosenEmoji(emojiObject.emoji);
     setClick(false);
   };
 
-  console.log(chosenEmoji, "emo");
-
-  const handleClick = (e) => {
+  const handleClick = () => {
     setClick(true);
   };
 
   const handleDivCLick = () => {
     if (Click) setClick(false);
   };
-  console.log(Click, "click");
+
+  const handleInput = (e) => {
+    let value = e.target.value;
+    setInput(value);
+    if (chosenEmoji) {
+      console.log(Input);
+      setInput(value + chosenEmoji);
+    }
+    // if (chosenEmoji !== null) {
+    //   console.log("object");
+    //   console.log(chosenEmoji);
+    //   setInput(value);
+    //   return;
+    // }
+  };
 
   return (
     <Wrapper onClick={handleDivCLick}>
       {Click ? (
-        <Picker
-          onEmojiClick={onEmojiClick}
-          skinTone={SKIN_TONE_MEDIUM_DARK}
-          style={{ position: "absolute", top: " -300px", right: "100px" }}
-        />
+        <StyledPicker>
+          <Picker
+            onEmojiClick={onEmojiClick}
+            skinTone={SKIN_TONE_MEDIUM_DARK}
+          />
+        </StyledPicker>
       ) : (
         <></>
       )}
       <BottomWrapper>
         <>{/* <button>Invite Your friends</button> */}</>
-        <StyledInpute type="text" placeholder="give your friends a sign " />
+        <StyledInpute
+          type="text"
+          placeholder="give your friends a sign "
+          onChange={(e) => handleInput(e)}
+          value={Input}
+        />
         <FlexWrapper>
           <ButtonIcon
             icon={smile}
-            onClick={(e) => handleClick(e)}
+            onClick={() => handleClick()}
             style={{ zIndex: "10" }}
           ></ButtonIcon>
           <ChatButtonIcon>Send</ChatButtonIcon>
