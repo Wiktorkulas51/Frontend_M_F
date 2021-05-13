@@ -38,7 +38,7 @@ const FlexWrapper = styled.div`
 const StyledInpute = styled(Input)`
   background-color: #bababa;
   border: none;
-  width: 100%;
+  width: 98%;
   height: 100%;
   grid-column: 1/2;
   grid-row: 2/2;
@@ -56,6 +56,7 @@ const ChatTemplate = () => {
   const [chosenEmoji, setChosenEmoji] = useState(null);
   const [Click, setClick] = useState(false);
   const [Input, setInput] = useState("");
+  const [keyPress, setkeyPress] = useState(false);
 
   const onEmojiClick = (e, emojiObject) => {
     console.log(e, "a");
@@ -87,8 +88,15 @@ const ChatTemplate = () => {
     // }
   };
 
+  const handleKeyChange = (e) => {
+    if (e.key === "Enter") {
+      setkeyPress(true);
+    }
+  };
+
   return (
     <Wrapper onClick={handleDivCLick}>
+      {keyPress ? <p>{Input}</p> : null}
       {Click ? (
         <StyledPicker>
           <Picker
@@ -105,6 +113,7 @@ const ChatTemplate = () => {
           type="text"
           placeholder="give your friends a sign "
           onChange={(e) => handleInput(e)}
+          onKeyPress={(e) => handleKeyChange(e)}
           value={Input}
         />
         <FlexWrapper>
