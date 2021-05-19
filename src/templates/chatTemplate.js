@@ -80,6 +80,8 @@ const ChatTemplate = () => {
       console.log(Input);
       setInput(value + chosenEmoji);
     }
+
+    console.log("i don't know why this still doesn't work");
     // if (chosenEmoji !== null) {
     //   console.log("object");
     //   console.log(chosenEmoji);
