@@ -5,6 +5,7 @@ import ButtonIcon from "components/atoms/buttonIcon/buttonIcon";
 import styled from "styled-components";
 import Input from "components/atoms/inpute/inpute";
 import smile from "assets/smileIcon.svg";
+import Paragraph from "components/atoms/paragraph/Paragraph";
 
 const Wrapper = styled.div`
   background-color: #bdbaba;
@@ -52,6 +53,10 @@ const StyledPicker = styled.div`
   bottom: 50px;
 `;
 
+const StyledParagraph = styled(Paragraph)`
+  color: #000;
+`;
+
 const ChatTemplate = () => {
   const [chosenEmoji, setChosenEmoji] = useState(null);
   const [Click, setClick] = useState(false);
@@ -81,9 +86,6 @@ const ChatTemplate = () => {
       setInput(value + chosenEmoji);
     }
 
-    console.log("i don't know why this still doesn't work");
-    console.log("i don't know why this still doesn't work");
-    console.log("i don't know why this still doesn't work");
     // if (chosenEmoji !== null) {
     //   console.log("object");
     //   console.log(chosenEmoji);
@@ -96,11 +98,27 @@ const ChatTemplate = () => {
     if (e.key === "Enter") {
       setkeyPress(true);
     }
+    setTimeout(() => {
+      setkeyPress(false);
+    }, 1000);
+  };
+
+  const handleChat = (Input) => {
+    let executed = false;
+
+    if (!executed) {
+      executed = true;
+    } else if (keyPress) {
+      return <StyledParagraph>{Input}</StyledParagraph>;
+    } else {
+      return null;
+    }
   };
 
   return (
     <Wrapper onClick={handleDivCLick}>
-      {keyPress ? <p>{Input}</p> : null}
+      {/* {keyPress ? handleChat(Input) : null} */}
+      {handleChat(Input)}
       {Click ? (
         <StyledPicker>
           <Picker
