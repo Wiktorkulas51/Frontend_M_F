@@ -6,6 +6,7 @@ import styled from "styled-components";
 import Input from "components/atoms/inpute/inpute";
 import smile from "assets/smileIcon.svg";
 import Paragraph from "components/atoms/paragraph/Paragraph";
+import { theme } from "theme/mainTheme";
 
 const Wrapper = styled.div`
   background-color: #bdbaba;
@@ -55,6 +56,8 @@ const StyledPicker = styled.div`
 
 const StyledParagraph = styled(Paragraph)`
   color: #000;
+  font-weight: ${() => theme.bold};
+  font-size: 1.2em;
 `;
 
 const ChatTemplate = () => {
@@ -62,10 +65,9 @@ const ChatTemplate = () => {
   const [Click, setClick] = useState(false);
   const [Input, setInput] = useState("");
   const [keyPress, setkeyPress] = useState(false);
+  const arr = [];
 
   const onEmojiClick = (e, emojiObject) => {
-    console.log(e, "a");
-    console.log(emojiObject);
     setChosenEmoji(emojiObject.emoji);
     setClick(false);
   };
@@ -81,10 +83,6 @@ const ChatTemplate = () => {
   const handleInput = (e) => {
     let value = e.target.value;
     setInput(value);
-    if (chosenEmoji) {
-      console.log(Input);
-      setInput(value + chosenEmoji);
-    }
 
     // if (chosenEmoji !== null) {
     //   console.log("object");
@@ -96,29 +94,42 @@ const ChatTemplate = () => {
 
   const handleKeyChange = (e) => {
     if (e.key === "Enter") {
+      arr.push(Input);
+      console.log(arr);
       setkeyPress(true);
-    }
-    setTimeout(() => {
-      setkeyPress(false);
-    }, 1000);
-  };
+      setChosenEmoji(null);
+      // setInput("");
 
-  const handleChat = (Input) => {
-    let executed = false;
-
-    if (!executed) {
-      executed = true;
-    } else if (keyPress) {
-      return <StyledParagraph>{Input}</StyledParagraph>;
-    } else {
-      return null;
+      const WrapperEl = Wrapper;
+      console.log(Wrapper);
     }
   };
+
+  // const handleChat = (Input) => {
+  //   let executed = false;
+  //   // const ParagEl = (document.createElement("p").textContent = Input);
+  //   // console.log(ParagEl);
+
+  //   if (!executed) {
+  //     executed = true;
+  //     if (keyPress) {
+  //       return <StyledParagraph>{Input}</StyledParagraph>;
+  //     }
+  //   } else {
+  //     return null;
+  //   }
+  // };
+
+  if (chosenEmoji) {
+    setInput(Input + chosenEmoji);
+    setChosenEmoji(null);
+  }
 
   return (
     <Wrapper onClick={handleDivCLick}>
-      {/* {keyPress ? handleChat(Input) : null} */}
-      {handleChat(Input)}
+      {/* {keyPress ? <p>{Input}</p> : null} */}
+      {/* {handleChat(Input)} */}
+      {console.log(arr.length)}
       {Click ? (
         <StyledPicker>
           <Picker
