@@ -64,8 +64,7 @@ const ChatTemplate = () => {
   const [chosenEmoji, setChosenEmoji] = useState(null);
   const [Click, setClick] = useState(false);
   const [Input, setInput] = useState("");
-  const [keyPress, setkeyPress] = useState(false);
-  const arr = [];
+  const [child, setchild] = useState(null);
 
   const onEmojiClick = (e, emojiObject) => {
     setChosenEmoji(emojiObject.emoji);
@@ -93,31 +92,34 @@ const ChatTemplate = () => {
   };
 
   const handleKeyChange = (e) => {
-    if (e.key === "Enter") {
-      arr.push(Input);
-      console.log(arr);
-      setkeyPress(true);
+    const wrapper = document.querySelector(".wrap");
+    if (e.code === "Enter") {
+      console.log(e);
+      setchild(<StyledParagraph>{Input}</StyledParagraph>);
+      // setkeyPress(true);
       setChosenEmoji(null);
       // setInput("");
-
-      const WrapperEl = Wrapper;
-      console.log(Wrapper);
+      // wrapper.appendChild(child);
     }
   };
 
-  // const handleChat = (Input) => {
-  //   let executed = false;
+  // const handleChat = (e) => {
+  //   // let executed = false;
   //   // const ParagEl = (document.createElement("p").textContent = Input);
   //   // console.log(ParagEl);
-
-  //   if (!executed) {
-  //     executed = true;
-  //     if (keyPress) {
-  //       return <StyledParagraph>{Input}</StyledParagraph>;
-  //     }
-  //   } else {
-  //     return null;
+  //   if (e.code === "Enter") {
+  //     return <StyledParagraph>{Input}</StyledParagraph>;
   //   }
+  //   const styledInput = document.querySelector(".inp");
+  //   console.log(styledInput);
+
+  //   // if (!executed) {
+  //   //   executed = true;
+  //   //   if (keyPress) {
+  //   //   }
+  //   // } else {
+  //   //   return null;
+  //   // }
   // };
 
   if (chosenEmoji) {
@@ -126,10 +128,10 @@ const ChatTemplate = () => {
   }
 
   return (
-    <Wrapper onClick={handleDivCLick}>
+    <Wrapper onClick={handleDivCLick} className={"wrap"}>
       {/* {keyPress ? <p>{Input}</p> : null} */}
       {/* {handleChat(Input)} */}
-      {console.log(arr.length)}
+      {child}
       {Click ? (
         <StyledPicker>
           <Picker
@@ -148,6 +150,7 @@ const ChatTemplate = () => {
           onChange={(e) => handleInput(e)}
           onKeyPress={(e) => handleKeyChange(e)}
           value={Input}
+          className={"inp"}
         />
         <FlexWrapper>
           <ButtonIcon
