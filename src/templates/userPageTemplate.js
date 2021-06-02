@@ -7,7 +7,7 @@ import Div from "components/molecules/div/div";
 import Button from "components/atoms/button/Button";
 import GirlPicture from "components/molecules/girlPicture/girlPicture";
 import MainTemplate from "./mainTemplate";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const UserPageTemplate = () => {
   const GridWrapper = styled.div`
@@ -55,9 +55,13 @@ const UserPageTemplate = () => {
             {<PrimaryParagraph secondary>FOR FREE.</PrimaryParagraph>}
           </div>
           <FlexWrapper>
-            <Button>Join room</Button>
+            <a href={"/room"}>
+              <Button>Join room</Button>
+            </a>
             <Paragraph>or</Paragraph>
-            <Button second>Create your own</Button>
+            <a href={"/room"}>
+              <Button second>Create your own</Button>
+            </a>
           </FlexWrapper>
         </GridWrapper>
         <GirlPicture />
